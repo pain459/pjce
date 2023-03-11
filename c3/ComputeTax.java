@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// By far the inefficient way. May be because I'm a beginner. 
+
 public class ComputeTax {
     public static void main(String[] args) {
         // Create a scanner
@@ -17,7 +19,7 @@ public class ComputeTax {
         int status = input.nextInt();
 
         // Adding program termination logic at the start itself.
-        if (status != 0 && status != 1 && status != 2 && status != 3) {
+        if (status != 0 || status != 1 || status != 2 || status != 3) {
             System.out.println("Invalid option. Program will now exit.");
             System.exit(1);
         }
