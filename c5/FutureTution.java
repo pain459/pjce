@@ -14,7 +14,7 @@ public class FutureTution {
         new_fee = 2 * current_fee;
 
         while (current_fee < new_fee){
-            current_fee = current_fee * 1.07;
+            current_fee = current_fee * 1.05;
             years++;
         }
         System.out.println("Tution fee will be doubled in " + years + " years.");
