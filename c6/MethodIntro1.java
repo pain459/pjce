@@ -11,9 +11,9 @@ public class MethodIntro1 {
             // }
             System.out.println("Enter the range of numbers to sum.");
             System.out.print("Enter first number: ");
-            int input1 = input.nextInt();
+            long input1 = input.nextLong();
             System.out.print("Enter second number: ");
-            int input2 = input.nextInt();
+            long input2 = input.nextLong();
             if ((input1 > input2) || (input1 < 0) || (input2 < 0)) {
                 System.out.print("You have entered invalid inputs. Do you want to try again? (y/n): ");
                 char choice2 = input.next().charAt(0);
@@ -43,9 +43,9 @@ public class MethodIntro1 {
         }
         System.out.println("Program ended now!");
     }
-    public static int sum(int i1, int i2) {
-        int result = 0;
-        for (int i = i1; i <= i2; i++) {
+    public static long sum(long i1, long i2) {
+        long result = 0;
+        for (long i = i1; i <= i2; i++) {
             result += i;
         }
         return result;        
