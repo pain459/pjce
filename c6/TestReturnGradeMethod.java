@@ -8,6 +8,10 @@ public class TestReturnGradeMethod {
         System.out.println("Your grade is " + getGrade(marks));  
     }
     public static char getGrade(double score) {
+        if (score < 0 || score > 100){
+            System.out.println("Invalid score.");
+            System.exit(1);
+        }
         if (score >= 90.0) {
             return 'A';
         }
