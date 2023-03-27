@@ -21,7 +21,7 @@ public class PrintCalendar {
     }
 
     public static void printMonthTitle(int year, int month) {
-        System.out.println("            " + getMonthName(month) + " " + year);
+        System.out.println("          " + getMonthName(month) + " " + year);
         System.out.println("-----------------------------");
         System.out.println(" Sun Mon Tue Wed Thu Fri Sat ");
     }
