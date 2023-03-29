@@ -1,4 +1,4 @@
-package c6;
+// package c6;
 
 public class RandomCharacter {
     // Generate a random character between ch1 and ch2
