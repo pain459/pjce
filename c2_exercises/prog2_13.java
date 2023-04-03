@@ -17,7 +17,8 @@ public class prog2_13 {
         for (int i = 1; i <= _months; i++) {
             newBalance = (monthlySavings + newBalance) * (1 + annualInterest / 100 / 12);
             // newBalance = (monthlySavings + newBalance) * (1 + 0.003125);
-            System.out.println("After the month " + i + ", the account value is " + newBalance);
+            System.out.print("After the month " + i + ", the account value is $" + newBalance);
+            System.out.printf(". Human friendly number %.3f\n", newBalance);
         }
     }
 }
