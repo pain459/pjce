@@ -2,6 +2,7 @@ package c3_exercises;
 import java.util.Scanner;
 public class prog3_5 {
     public static void main(String[] args) {
+	// initiating the scanner
         Scanner input = new Scanner(System.in);
         System.out.print("Enter today's day: ");
         int dayToday = input.nextInt();
