@@ -13,7 +13,7 @@ public class prog3_6 {
 		final double KILOGRAMS_PER_POUND = 0.45359237;
 		final double METER_PER_FEET = 0.3048;
 
-		// compute BMI and weight conversion logic
+		// compute BMI and weight conversion logic comment
 		double weightInKilograms = _weight * KILOGRAMS_PER_POUND;
 		double heightInMeters = METER_PER_FEET * (_feet + ((double) _inches / 12));
 		double _bmi = weightInKilograms / Math.pow(heightInMeters, 2);
