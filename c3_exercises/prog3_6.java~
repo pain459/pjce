@@ -15,7 +15,7 @@ public class prog3_6 {
 
 		// compute BMI
 		double weightInKilograms = _weight * KILOGRAMS_PER_POUND;
-		double heightInMeters = METER_PER_FEET * (_feet + (_inches / 12));
+		double heightInMeters = METER_PER_FEET * (_feet + ((double) _inches / 12));
 		double _bmi = weightInKilograms / Math.pow(heightInMeters, 2);
 		// Display result
 		System.out.println("BMI is " + _bmi);		
