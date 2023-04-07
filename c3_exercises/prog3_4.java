@@ -1,5 +1,3 @@
-package c3_exercises;
-
 public class prog3_4 {
     public static void main(String[] args) {
         int _year = (int) (Math.random() * 10000);

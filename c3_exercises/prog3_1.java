@@ -1,5 +1,3 @@
-package c3_exercises;
-
 import java.util.Scanner;
 
 public class prog3_1 {
