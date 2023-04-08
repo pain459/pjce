@@ -1,4 +1,4 @@
-package c3_exercises;
+// package c3_exercises;
 
 public class prog3_4 {
     public static void main(String[] args) {

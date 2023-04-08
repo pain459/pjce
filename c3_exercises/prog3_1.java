@@ -1,4 +1,4 @@
-package c3_exercises;
+// package c3_exercises;
 
 import java.util.Scanner;
 
