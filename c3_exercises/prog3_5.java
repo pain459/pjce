@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // package c3_exercises;
+=======
+>>>>>>> 1c3f64a7486c5d01d82ebab92104353285ed346d
 import java.util.Scanner;
 public class prog3_5 {
     public static void main(String[] args) {

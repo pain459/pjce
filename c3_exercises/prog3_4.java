@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 // package c3_exercises;
 
+=======
+>>>>>>> 1c3f64a7486c5d01d82ebab92104353285ed346d
 public class prog3_4 {
     public static void main(String[] args) {
         int _year = (int) (Math.random() * 10000);
