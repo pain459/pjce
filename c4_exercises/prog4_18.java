@@ -30,5 +30,5 @@ public class prog4_18 {
         // parse the output
         System.out.println(_classifier.get(_input.charAt(0)) + " " + _classifier.get(_input.charAt(1)));
 
-    };
+    }
 }
