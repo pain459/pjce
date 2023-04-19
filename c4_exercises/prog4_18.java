@@ -19,9 +19,9 @@ public class prog4_18 {
         }
 
         Dictionary<Character, String> _classifier = new Hashtable<>(7);
-        _classifier.put('I', "Information Management");
-        _classifier.put('C', "Computer Science");
-        _classifier.put('A', "Accounting");
+        _classifier.put(_group.get(0), "Information Management");
+        _classifier.put(_group.get(1), "Computer Science");
+        _classifier.put(_group.get(2), "Accounting");
         _classifier.put('1', "freshman");
         _classifier.put('2', "sophomore");
         _classifier.put('3', "junior");
