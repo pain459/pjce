@@ -1,36 +1,54 @@
+
+// Java program to sort hashmap by values
 import java.util.*;
+import java.lang.*;
+
 public class prog5_9 {
+
+    // function to sort hashmap by values
+    public static HashMap<String, Double> sortByValue(HashMap<String, Double> hm) {
+        // Create a list from elements of HashMap
+        List<Map.Entry<String, Double>> list = new LinkedList<Map.Entry<String, Double>>(hm.entrySet());
+
+        // Sort the list
+        Collections.sort(list, new Comparator<Map.Entry<String, Double>>() {
+            public int compare(Map.Entry<String, Double> o1,
+                    Map.Entry<String, Double> o2) {
+                return (o1.getValue()).compareTo(o2.getValue());
+            }
+        });
+
+        // put data from sorted list to hashmap
+        HashMap<String, Double> temp = new LinkedHashMap<String, Double>();
+        for (Map.Entry<String, Double> aa : list) {
+            temp.put(aa.getKey(), aa.getValue());
+        }
+        return temp;
+    }
+
+    // Driver Code
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in); 
-        System.out.println("Program will generate last two low scoring students names with marks.");
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Program will generate low scoring student name with marks.");
         System.out.print("Enter the number of entries you want to verify: ");
         int numberOfRecords = input.nextInt();
-        double lowestScore1 = Double.MAX_VALUE, lowestScore2 = Double.MAX_VALUE;
-        String lowestScorer1 = "", lowestScorer2 = "";
-        while (numberOfRecords > 0){
+        HashMap<String, Double> hm = new HashMap<String, Double>();
+        while (numberOfRecords > 0) {
             System.out.print("Enter student name: ");
             String studentName = input.next();
             System.out.print("Enter student marks: ");
             double studentMarks = input.nextDouble();
-            // need to rewrite logic
-            if (studentMarks < lowestScore1) {
-                lowestScore1 = studentMarks;
-                lowestScorer1 = studentName;
-                lowestScore2 = studentMarks + 1;
-                lowestScorer2 = studentName;
-                if (lowestScore2 < lowestScore1) {
-                    lowestScore2 = lowestScore1;
-                    lowestScorer2 = lowestScorer1;
-                }
-            } else {
-                ;
-            }
+            hm.put(studentName, studentMarks);
             numberOfRecords--;
         }
-        // Getting the minimum score details.
-        System.out.println("Lowest scorer is student: " + lowestScorer1);
-        System.out.println("Lowest score is: " + lowestScore1);
-        System.out.println("Second lowest scorer is student: " + lowestScorer2);
-        System.out.println("Second lowest score is: " + lowestScore2);
+        Map<String, Double> hm1 = sortByValue(hm);
+
+        // print the sorted hashmap
+        for (Map.Entry<String, Double> en : hm1.entrySet()) {
+            System.out.println("Key = " + en.getKey() +
+                    ", Value = " + en.getValue());
+        }
+        // System.out.println(hm1);
     }
 }
