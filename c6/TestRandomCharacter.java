@@ -1,4 +1,4 @@
-// package c6;
+package c6;
 
 public class TestRandomCharacter {
     public static void main(String[] args) {
@@ -10,8 +10,7 @@ public class TestRandomCharacter {
             char ch = RandomCharacter.getRandomLowerCaseLetter();
             if ((i + 1) % CHARS_PER_LINE == 0) {
                 System.out.println(ch);
-            }
-            else {
+            } else {
                 System.out.print(ch);
             }
         }
