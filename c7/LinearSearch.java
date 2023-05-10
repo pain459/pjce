@@ -1,5 +1,3 @@
-package c7;
-
 public class LinearSearch {
     // The method for finding a key in the list
     public static int linearSearch(int[] list, int key) {

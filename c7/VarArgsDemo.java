@@ -1,5 +1,3 @@
-package c7;
-
 public class VarArgsDemo {
     public static void main(String[] args) {
         printMax(25, 54, 85, 65.5);

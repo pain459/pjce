@@ -1,5 +1,3 @@
-package c7;
-
 import java.util.Arrays;
 
 public class DeckOfCards {

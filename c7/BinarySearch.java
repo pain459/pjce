@@ -1,5 +1,3 @@
-package c7;
-
 public class BinarySearch {
     public static int binarySearch(int[] list, int key) {
         int low = 0;
