@@ -37,4 +37,16 @@ public class captureInput {
                                                                              // from the method.
         return returnedArray;
     }
+
+    public static double[] captureArrayOfSize(int size) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter " + size + " double values:");
+        double[] userInput = new double[size];
+        for (int i = 0; i < size; i++) {
+            double _input = input.nextDouble();
+            userInput[i] = _input;
+        }
+
+        return userInput;
+    }
 }

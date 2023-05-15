@@ -20,4 +20,21 @@ public class counters {
         }
         return blankArray;
     }
+
+    public static double arrayElementsCounter(double[] inputArray) {
+        double result = 0;
+        for (double i : inputArray) {
+            result += i;
+        }
+        return result;
+    }
+
+    // overloaded method.
+    public static int arrayElementsCounter(int[] inputArray) {
+        int result = 0;
+        for (int i : inputArray) {
+            result += i;
+        }
+        return result;
+    }
 }
