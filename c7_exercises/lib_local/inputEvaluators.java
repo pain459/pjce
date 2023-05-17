@@ -22,4 +22,15 @@ public class inputEvaluators {
         }
         return maxElement;
     }
+
+    public static boolean inputInRange(int[] userInput, int min, int max) {
+        boolean inRange = true;
+        for (int i : userInput) {
+            if (i > max) {
+                inRange = false;
+                break;
+            }
+        }
+        return inRange;
+    }
 }
