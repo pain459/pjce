@@ -34,8 +34,10 @@ public class mathOperations {
         for (int i = 1; i < userInput.length; i++) {
             if (userInput[0] % k == 0 && userInput[i] % k == 0) {
                 l = k;
+            } else {
+                l = j;
             }
         }
-        return k;
+        return l;
     }
 }
