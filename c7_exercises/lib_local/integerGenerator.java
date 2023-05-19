@@ -31,4 +31,19 @@ public class integerGenerator {
         }
         return _random;
     }
+
+    public static int[] generateArrayOfSizeOfNumberOfDigits(int range, int digits) {
+        int[] generatedArray = new int[range]; // initiating an empty error of required size.
+        Random random = new Random(); // initiating a random object.
+        for (int i = 0; i < range; i++) {
+            generatedArray[i] = (int) (random.nextInt() % Math.pow(10, digits));  // generating a random ineger and adding it to array.
+        }
+        return generatedArray;
+    }
+
+    public static int generateRandomIntegerOfLength(int length) {
+        Random random = new Random();
+        int randomInteger = (int) (random.nextInt() % Math.pow(10, length));
+        return randomInteger;
+    }
 }
