@@ -75,4 +75,32 @@ public class arrayOperations {
         }
         return userInput;
     }
+
+    public static String[] performSelectionSortIntAndStringArray(int[] userInput, String[] userString) {
+        // int[] sortedArray = new int[userInput.length];
+        // [2, 9, 5, 4, 8, 1, 6]
+        for (int i = 0; i < userInput.length - 1; i++) {
+            int currentMin = userInput[i];
+            String currentMinString = userString[i];
+            int currentMinIndex = i;
+            int currentMindStringIndex = i;
+
+            for (int j = i + 1; j < userInput.length; j++) {
+                if (currentMin > userInput[j]) {
+                    currentMin = userInput[j];
+                    currentMinString = userString[j];
+                    currentMinIndex = j;
+                    currentMindStringIndex = j;
+                }
+            }
+
+            if (currentMinIndex != i) {
+                userInput[currentMinIndex] = userInput[i];
+                userString[currentMindStringIndex] = userString[i];
+                userInput[i] = currentMin;
+                userString[i] = currentMinString;
+            }
+        }
+        return userString;
+    }
 }

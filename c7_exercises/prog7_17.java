@@ -16,5 +16,7 @@ public class prog7_17 {
         System.out.println(Arrays.toString(userMarks));
         int[] sortedArray = arrayOperations.performSelectionSortInt(userMarks);
         System.out.println(Arrays.toString(sortedArray));
+        String[] sortedStrings = arrayOperations.performSelectionSortIntAndStringArray(userMarks, userInput);
+        System.out.println(Arrays.toString(sortedStrings));
     }
 }
