@@ -49,4 +49,28 @@ public class captureInput {
 
         return userInput;
     }
+
+    public static int[] captureArrayOfSizeInt(int size) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter " + size + " int values:");
+        int[] userInput = new int[size];
+        for (int i = 0; i < size; i++) {
+            int _input = input.nextInt();
+            userInput[i] = _input;
+        }
+
+        return userInput;
+    }
+
+    public static String[] captureStringsInArray(int size) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter " + size + " strings: ");
+        String[] userInput = new String[size];
+        for (int i = 0; i < size; i++) {
+            String _input = input.nextLine();
+            userInput[i] = _input;
+        }
+
+        return userInput;
+    }
 }
