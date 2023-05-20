@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.w3c.dom.UserDataHandler;
+
 public class arrayOperations {
     public static double[] reverseArray(double[] userInput) {
         double[] reversedArray = new double[userInput.length];
@@ -23,5 +25,31 @@ public class arrayOperations {
         }      
         int[] returnedArray = cleanedIntegers.stream().mapToInt(i -> i).toArray();
         return returnedArray;
+    }
+
+    public static boolean performLinearSearch (int[] userInput, int searchElement) {
+        boolean found = false;
+        for (int i = 0; i < userInput.length ; i++) {
+            if (userInput[i] == searchElement) {
+                found = true;
+            }
+        }
+        return found;
+    }
+
+    public static int performBinarySearch (int[] userInput, int searchElement) {
+        int low = 0;
+        int high = userInput.length -1;
+        while (high >= low) {
+            int mid = (low + high) / 2;
+            if (searchElement < userInput[mid]) {
+                high = mid - 1;
+            } else if (searchElement == userInput[mid]) {
+                return mid;
+            } else {
+                low = mid + 1;
+            }
+        }
+        return -low -1;  // high < low, key not found.
     }
 }
