@@ -103,4 +103,16 @@ public class arrayOperations {
         }
         return userString;
     }
+
+    public static void performBubbleSortInt(int[] userInput) {
+        for (int i = userInput.length; i > 0; i--) {
+            int currentLeft = userInput[i - 1];
+            int currentMinIndex = i;
+            // int currentRight =
+            // System.out.print(currentLeft);
+            // System.out.print(" ");
+            // System.out.print(currentMinIndex);
+
+        }
+    }
 }
