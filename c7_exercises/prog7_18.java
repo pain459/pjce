@@ -10,8 +10,8 @@ public class prog7_18 {
         // int[] userInput = captureInput.captureArrayOfSizeInt(10);
         // System.out.println(Arrays.toString(userInput));
         int[] userInput = { 5, 9, 3, 1, 2, 8, 4, 7, 6 };
-        // int[] sortedArray = arrayOperations.performBubbleSortInt(userInput);
-        // System.out.println(Arrays.toString(sortedArray));
-        arrayOperations.performBubbleSortInt(userInput);
+        int[] sortedArray = arrayOperations.performBubbleSortInt(userInput);
+        System.out.println(Arrays.toString(sortedArray));
+        // arrayOperations.performBubbleSortInt(userInput);
     }
 }

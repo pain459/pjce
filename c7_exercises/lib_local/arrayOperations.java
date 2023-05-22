@@ -104,15 +104,18 @@ public class arrayOperations {
         return userString;
     }
 
-    public static void performBubbleSortInt(int[] userInput) {
-        for (int i = userInput.length; i > 0; i--) {
-            int currentLeft = userInput[i - 1];
-            int currentMinIndex = i;
-            // int currentRight =
-            // System.out.print(currentLeft);
-            // System.out.print(" ");
-            // System.out.print(currentMinIndex);
-
+    public static int[] performBubbleSortInt(int[] userInput) {
+        int n = userInput.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1; j++) {
+                if (userInput[j] > userInput[j + 1]) {
+                    // swap userInput[j+1] and userInput[j]
+                    int temp = userInput[j];
+                    userInput[j] = userInput[j + 1];
+                    userInput[j + 1] = temp;
+                }
+            }
         }
+        return userInput;
     }
 }
