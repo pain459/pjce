@@ -14,4 +14,23 @@ public class inputEvaluators {
         results[1] = odd;
         return results;
     }
+
+    public static double largestElement(double[] userInput) {
+        double maxElement = 0;
+        for (double i : userInput) {
+            maxElement = (i > maxElement ? i : maxElement);
+        }
+        return maxElement;
+    }
+
+    public static boolean inputInRange(int[] userInput, int min, int max) {
+        boolean inRange = true;
+        for (int i : userInput) {
+            if (i > max) {
+                inRange = false;
+                break;
+            }
+        }
+        return inRange;
+    }
 }
