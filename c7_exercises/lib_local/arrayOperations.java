@@ -77,6 +77,28 @@ public class arrayOperations {
         return userInput;
     }
 
+    public static int[] performReverseSelectionSortInt(int[] userInput) {
+        // int[] sortedArray = new int[userInput.length];
+        // [2, 9, 5, 4, 8, 1, 6]
+        for (int i = 0; i < userInput.length - 1; i++) {
+            int currentMax = userInput[i];
+            int currentMaxIndex = i;
+
+            for (int j = i + 1; j < userInput.length; j++) {
+                if (currentMax < userInput[j]) {
+                    currentMax = userInput[j];
+                    currentMaxIndex = j;
+                }
+            }
+
+            if (currentMaxIndex != i) {
+                userInput[currentMaxIndex] = userInput[i];
+                userInput[i] = currentMax;
+            }
+        }
+        return userInput;
+    }
+
     public static String[] performSelectionSortIntAndStringArray(int[] userInput, String[] userString) {
         // int[] sortedArray = new int[userInput.length];
         // [2, 9, 5, 4, 8, 1, 6]
