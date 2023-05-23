@@ -2,6 +2,7 @@ package lib_local;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 import org.w3c.dom.UserDataHandler;
@@ -117,5 +118,25 @@ public class arrayOperations {
             }
         }
         return userInput;
+    }
+
+    public static int[] performReverseSortInt(int[] userInput) {
+        /**The Arrays.sort() method with a custom comparator is applicable only for arrays of reference types, 
+         * not for primitive types like int[]. However, you can use the Arrays.stream() method to convert the 
+         * int[] array to an Integer[] array and then perform the reverse sorting. */
+        Integer[] boxedNumbers = Arrays.stream(userInput).boxed().toArray(Integer[]::new);
+        Arrays.sort(boxedNumbers, Comparator.reverseOrder());
+        // Integer[] integerArray = {1, 2, 3, 4, 5};
+        // converting back from reference type to primitive type\
+        int[] intArray = new int[boxedNumbers.length];
+        for (int i = 0; i < boxedNumbers.length; i++) {
+            intArray[i] = boxedNumbers[i];
+        }
+        return intArray;
+    }
+
+    public static boolean areTwoArraysEqualInt(int[] userinput1, int[] userinput2) {
+        boolean areEqual = Arrays.equals(userinput1, userinput2);
+        return areEqual;
     }
 }
