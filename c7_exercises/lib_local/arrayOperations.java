@@ -2,6 +2,7 @@ package lib_local;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 import org.w3c.dom.UserDataHandler;
@@ -76,6 +77,28 @@ public class arrayOperations {
         return userInput;
     }
 
+    public static int[] performReverseSelectionSortInt(int[] userInput) {
+        // int[] sortedArray = new int[userInput.length];
+        // [2, 9, 5, 4, 8, 1, 6]
+        for (int i = 0; i < userInput.length - 1; i++) {
+            int currentMax = userInput[i];
+            int currentMaxIndex = i;
+
+            for (int j = i + 1; j < userInput.length; j++) {
+                if (currentMax < userInput[j]) {
+                    currentMax = userInput[j];
+                    currentMaxIndex = j;
+                }
+            }
+
+            if (currentMaxIndex != i) {
+                userInput[currentMaxIndex] = userInput[i];
+                userInput[i] = currentMax;
+            }
+        }
+        return userInput;
+    }
+
     public static String[] performSelectionSortIntAndStringArray(int[] userInput, String[] userString) {
         // int[] sortedArray = new int[userInput.length];
         // [2, 9, 5, 4, 8, 1, 6]
@@ -102,5 +125,40 @@ public class arrayOperations {
             }
         }
         return userString;
+    }
+
+    public static int[] performBubbleSortInt(int[] userInput) {
+        int n = userInput.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1; j++) {
+                if (userInput[j] > userInput[j + 1]) {
+                    // swap userInput[j+1] and userInput[j]
+                    int temp = userInput[j];
+                    userInput[j] = userInput[j + 1];
+                    userInput[j + 1] = temp;
+                }
+            }
+        }
+        return userInput;
+    }
+
+    public static int[] performReverseSortInt(int[] userInput) {
+        /**The Arrays.sort() method with a custom comparator is applicable only for arrays of reference types, 
+         * not for primitive types like int[]. However, you can use the Arrays.stream() method to convert the 
+         * int[] array to an Integer[] array and then perform the reverse sorting. */
+        Integer[] boxedNumbers = Arrays.stream(userInput).boxed().toArray(Integer[]::new);
+        Arrays.sort(boxedNumbers, Comparator.reverseOrder());
+        // Integer[] integerArray = {1, 2, 3, 4, 5};
+        // converting back from reference type to primitive type\
+        int[] intArray = new int[boxedNumbers.length];
+        for (int i = 0; i < boxedNumbers.length; i++) {
+            intArray[i] = boxedNumbers[i];
+        }
+        return intArray;
+    }
+
+    public static boolean areTwoArraysEqualInt(int[] userinput1, int[] userinput2) {
+        boolean areEqual = Arrays.equals(userinput1, userinput2);
+        return areEqual;
     }
 }
