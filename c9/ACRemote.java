@@ -6,7 +6,7 @@ public class ACRemote {
     int fan = 3; // max should be 5
     boolean on = false;
     //power config
-    boolean power_mode = false;
+    int power_mode = 0;
     int power_temp = 16;
     int power_fan = 5;
     boolean power_swing = true;
@@ -30,7 +30,6 @@ public class ACRemote {
             System.out.println("AC fan set to " + power_fan);
         } else {
             System.out.println("BEEP! BEEP!");
-        }
-        
+        }        
     }
 }
