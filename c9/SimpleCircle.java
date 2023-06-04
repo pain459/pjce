@@ -1,7 +1,7 @@
 public class SimpleCircle {
     public static void main(String[] args) {
         System.out.println("Demonstration of simple circle program in a single class.");
-        SimpleCircle circle1 = new SimpleCircle();
+        SimpleCircle1 circle1 = new SimpleCircle1();
         System.out.println("The area of the circle of radius "
                 + circle1.radius + " is " + circle1.getArea());
     }
