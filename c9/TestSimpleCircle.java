@@ -3,17 +3,17 @@ public class TestSimpleCircle {
     public static void main(String[] args) {
         // main class
         // Create a circle with radius 1
-        SimpleCircle circle1 = new SimpleCircle();
+        SimpleCircle1 circle1 = new SimpleCircle1();
         System.out.println("The area of the circle of radius "
                 + circle1.radius + " is " + circle1.getArea());
 
         // Create a circle with radius 25
-        SimpleCircle circle2 = new SimpleCircle(25);
+        SimpleCircle1 circle2 = new SimpleCircle1(25);
         System.out.println("The area of the circle of radius "
                 + circle2.radius + " is " + circle2.getArea());
 
         // Create a circle with redius 125
-        SimpleCircle circle3 = new SimpleCircle(125);
+        SimpleCircle1 circle3 = new SimpleCircle1(125);
         System.out.println("The area of the circle of radius "
                 + circle3.radius + " is " + circle3.getArea());
 
@@ -25,16 +25,16 @@ public class TestSimpleCircle {
 }
 
 // define a circle class with 2 constructors
-class SimpleCircle {
+class SimpleCircle1 {
     double radius; // declaring the variable radius
 
     /** Construct a circle with radius 1 */
-    SimpleCircle() {
+    SimpleCircle1() {
         radius = 1;
     }
 
     /** Construct a circle with specific radius */
-    SimpleCircle(double newRadius) {
+    SimpleCircle1(double newRadius) {
         radius = newRadius;
     }
 
