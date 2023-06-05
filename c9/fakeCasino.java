@@ -42,7 +42,7 @@ public class fakeCasino {
             }
             remainingRounds--;
         }
-        System.out.println("User won " + userWon + " games. Total money of " + userWon * minimumBet);
-        System.out.println("House won " + houseWon + " games. Total money of " + houseWon * minimumBet);
+        System.out.println("User won " + userWon + " games. Total prize money " + userWon * minimumBet);
+        System.out.println("House won " + houseWon + " games. Total prize money " + houseWon * minimumBet);
     }
 }
