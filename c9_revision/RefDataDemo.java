@@ -4,7 +4,7 @@ public class RefDataDemo {
     String name;
     int rank;
     int registrationNumber;
-    private int studentRecord;
+    private static int studentRecord; // making this variable shared by all objects in the class.
 
     RefDataDemo() {
 //        studentRecord++;
