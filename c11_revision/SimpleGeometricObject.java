@@ -7,6 +7,7 @@ public class SimpleGeometricObject {
 
     /** Construct a default geometry object */
     public SimpleGeometricObject() {
+        dateCreated = new java.util.Date();
     }
 
     /** Construct a  geometric object with the specified color and
