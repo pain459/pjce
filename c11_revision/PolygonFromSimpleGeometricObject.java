@@ -24,6 +24,14 @@ public class PolygonFromSimpleGeometricObject extends SimpleGeometricObject{
         setFilled(filled);
     }
 
+    public double getInRadius() {
+        double a = lengthOfASide;
+        int n = numberOfSides;
+        double radians = Math.toDegrees(Math.PI / n);
+//        return ((a / 2) * Math.atan(Math.PI / n));
+        return (((double)1 / 2) * a * Math.atan(radians));
+
+    }
     public double getArea() {
         return ((Math.pow(lengthOfASide, 2) * numberOfSides) / (4 * Math.tan((double) 180 / numberOfSides)));
     }
