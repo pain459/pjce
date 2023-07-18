@@ -8,13 +8,13 @@ public class DynamicBindingDemo {
         m(new Object());
 
     }
+    // Dynamic Binding
     public static void m(Object x) {
         System.out.println(x.toString());
     }
 }
 
 class GraduateStudent extends Student {
-
 }
 class Student extends Person {
     @Override
