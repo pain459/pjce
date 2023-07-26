@@ -11,11 +11,11 @@ public class Test8 {
             if (!input.hasNextDouble()) {
                 throw new InputMismatchException("It isn't a double. You bought an exception");
             } else if (input.hasNextDouble()) {
-                throw new RuntimeException("You earned an exception");
+                throw new IllegalArgumentException("You earned an exception");
             }
         } catch (InputMismatchException ex) {
             System.out.println(ex.getMessage());
-        } catch (RuntimeException ex) {
+        } catch (IllegalArgumentException ex) {
             System.out.println(ex.getMessage());
         }
     }
