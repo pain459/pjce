@@ -9,7 +9,7 @@ public class TestCircleWithCustomException {
             new CircleWithCustomException(0);
             new CircleWithCustomException(-5);
         } catch (InvalidRadiusException ex){
-            System.out.println(ex.getMessage());
+            System.out.println(ex);
         }
         System.out.println("Number of objects created: " + CircleWithCustomException.getNumberOfObjects() );
     }
