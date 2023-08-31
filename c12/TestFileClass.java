@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class TestFileClass {
     public static void main(String[] args) throws IOException {
-        java.io.File file1 = new java.io.File("testing_file_class//us.gif");
+        java.io.File file1 = new java.io.File("testing_file_class//us.txt");
         if (file1.createNewFile()) {
             System.out.println("File1 is created.");
         } else {
