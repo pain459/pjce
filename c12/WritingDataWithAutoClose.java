@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class WritingDataWithAutoClose {
     public static void main(String[] args) throws IOException {
-        java.io.File file = new java.io.File("testing_file_class/scores1.txt");
+        java.io.File file = new java.io.File("testing_file_class/scores2.txt");
         if (file.exists()) {
             System.out.println("File already exists.");
             System.exit(1);
